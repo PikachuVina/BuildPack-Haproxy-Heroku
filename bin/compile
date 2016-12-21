@@ -45,6 +45,6 @@ echo "$LP_DIR"
 mkdir -p $BUILD_DIR/vendor/haproxy
 cp $LP_DIR/vendor/* $BUILD_DIR/vendor/haproxy
 
-echo "-----> Building runtime environment"
+echo "-----> Xay dung moi truong Haproxy"
 mkdir -p $BUILD_DIR/.profile.d
 echo "export PATH=\"$HAPROXY_DIR/haproxy:\$PATH\"" > $BUILD_DIR/.profile.d/haproxy.sh
