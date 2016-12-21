@@ -17,6 +17,7 @@ SCONS_VERSION="1.2.0"
 BUILD_DIR=$1
 CACHE_DIR=$2
 LP_DIR=`cd $(dirname $0); cd ..; pwd`
+HAPROXY_DIR=${HOME}/vendor/haproxy
 
 function error() {
   echo " !     $*" >&2
@@ -46,4 +47,4 @@ cp $LP_DIR/vendor/* $BUILD_DIR/vendor/haproxy
 
 echo "-----> Building runtime environment"
 mkdir -p $BUILD_DIR/.profile.d
-echo "export PATH=\"\$HOME/vendor/haproxy:\$PATH\"" > $BUILD_DIR/.profile.d/haproxy.sh
+echo "export PATH=\"\$HAPROXY_DIR/haproxy:\$PATH\"" > $BUILD_DIR/.profile.d/haproxy.sh
